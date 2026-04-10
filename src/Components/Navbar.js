@@ -17,6 +17,7 @@ function Navbar() {
   const handleLogout = () => {
     localStorage.removeItem("user");
     setUser(null);
+    window.dispatchEvent(new Event('logout'));
     navigate("/");
   };
 

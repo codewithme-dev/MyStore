@@ -6,6 +6,7 @@
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   text-align: center;
+  position: relative;
 }
 
 .add-container h2 {
@@ -50,4 +51,20 @@
 .form button:disabled {
   background: gray;
   cursor: not-allowed;
+}
+
+.my-product-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.my-product-btn:hover {
+  background: #218838;
 }

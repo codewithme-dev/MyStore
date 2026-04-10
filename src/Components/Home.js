@@ -13,6 +13,14 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    const handleLogout = () => {
+      window.location.reload();
+    };
+    window.addEventListener('logout', handleLogout);
+    return () => window.removeEventListener('logout', handleLogout);
+  }, []);
+
   return (
     <div className="home-container">
       {user && (

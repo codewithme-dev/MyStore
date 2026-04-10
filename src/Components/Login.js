@@ -12,7 +12,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwYJIysUY1gDy6fo0FOwXKUKPSdUtjn7zXVh2pHaD-bDS3GSYj737wM5clP0vYUWxS3fg/exec";
+    "https://script.google.com/macros/s/AKfycbymYeXlRkN_I0ijmHV3ymHxZDAeX8a1t-LV__s_uG0YJyokF0M-Wvh6Y79CfOWDze1nyQ/exec";
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });

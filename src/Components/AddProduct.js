@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./AddProduct.css";
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwYJIysUY1gDy6fo0FOwXKUKPSdUtjn7zXVh2pHaD-bDS3GSYj737wM5clP0vYUWxS3fg/exec";
+  "https://script.google.com/macros/s/AKfycbymYeXlRkN_I0ijmHV3ymHxZDAeX8a1t-LV__s_uG0YJyokF0M-Wvh6Y79CfOWDze1nyQ/exec";
 
 export default function AddProduct() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -95,6 +95,9 @@ export default function AddProduct() {
 
   return (
     <div className="add-container">
+      <Link to="/my-products" className="my-product-btn">
+        My Products
+      </Link>
       <h2>Add New Product</h2>
 
       <form onSubmit={handleSubmit} className="form">
