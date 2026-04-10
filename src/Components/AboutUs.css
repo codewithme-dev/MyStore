@@ -1,0 +1,28 @@
+.about-container {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial;
+}
+
+.desc {
+  max-width: 600px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: #555;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  width: 200px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
