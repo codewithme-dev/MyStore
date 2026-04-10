@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./MyProduct.css";
 
@@ -29,7 +29,7 @@ export default function MyProducts() {
   // ======================
   // FETCH PRODUCTS
   // ======================
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     try {
       const res = await fetch(SCRIPT_URL + "?action=getProducts");
       const data = await res.json();
@@ -45,11 +45,11 @@ export default function MyProducts() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [user?.id]);
 
   useEffect(() => {
     fetchProducts();
-  }, []);
+  }, [fetchProducts]);
 
   // ======================
   // EDIT CLICK

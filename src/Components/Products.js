@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./Products.css";
 
 const SCRIPT_URL =
@@ -10,7 +10,7 @@ export default function Products() {
   const [cart, setCart] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     try {
       const res = await fetch(SCRIPT_URL + "?action=getProducts");
       const data = await res.json();
@@ -26,13 +26,13 @@ export default function Products() {
     }
 
     setLoading(false);
-  };
+  }, []);
 
   useEffect(() => {
     fetchProducts();
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(savedCart);
-  }, []);
+  }, [fetchProducts]);
 
   const updateCart = (nextCart) => {
     setCart(nextCart);
