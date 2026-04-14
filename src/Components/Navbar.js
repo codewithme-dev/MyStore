@@ -42,6 +42,7 @@ function Navbar() {
 
         {user && (
           <>
+            <Link to="/user-feedback">Feedback</Link>
             <Link to="#" onClick={handleLogout}>Logout</Link>
           </>
         )}

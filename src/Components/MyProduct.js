@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./MyProduct.css";
 
 const SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbymYeXlRkN_I0ijmHV3ymHxZDAeX8a1t-LV__s_uG0YJyokF0M-Wvh6Y79CfOWDze1nyQ/exec";
+  "https://script.google.com/macros/s/AKfycbzhIGRIyYwy6wl3Q2Q1T4XUK7PW0339mUcAAuLZo6BTbOF1BTh1busAZH07nnOhaJ0E1Q/exec";
 
 export default function MyProducts() {
   const user = JSON.parse(localStorage.getItem("user"));

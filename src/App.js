@@ -11,6 +11,7 @@ import Login from "./Components/Login";
 import AddProduct from "./Components/AddProduct";
 import Products from "./Components/Products";
 import MyProducts from "./Components/MyProduct";
+import UserFeedback from "./Components/UserFeedback";
 
 function App() {
     const teamData = [
@@ -111,6 +112,8 @@ function App() {
         <Route path="/products" element={<AddProduct />} />
         <Route path="/products-list" element={<Products />} />
         <Route path="/my-products" element={<MyProducts />} />
+
+        <Route path="/user-feedback" element={<UserFeedback />} />
 
       </Routes>
     </Router>
